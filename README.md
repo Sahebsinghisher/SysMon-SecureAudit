@@ -1,5 +1,7 @@
 # SysMon-SecureAudit
 
+IMPORTANT-Environment=Linux(UBUNTU Latest Version)
+
 SET 1: MONITORING SYSTEM RESOURCES FOR A PROXY SERVER.
 Installation Procedure-
 1. Clone or Download the Script
@@ -7,9 +9,8 @@ Installation Procedure-
 
 2. Make the Script Executable
 -> Open a terminal and navigate to the directory where the script is located. Then, make it executable:
-
 bash Command-
-$ chmod +x monitor.sh
+$chmod +x monitor.sh (NOTE-chmod only works in Unix/linux and Unix-like systems)
 #) Usage
 You can run the script with various command-line switches to view specific parts of the dashboard.
 
