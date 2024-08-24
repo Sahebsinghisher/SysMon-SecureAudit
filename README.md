@@ -7,7 +7,7 @@ Installation Procedure-
 1. Clone or Download the Script
 -> Clone the repository or download the monitor.sh script.
 
-2. Make the Script Executable
+2. Make the Script Executable (Imp Step)
 -> Open a terminal and navigate to the directory where the script is located. Then, make it executable:
 bash Command-
 $chmod +x monitor.sh (NOTE-chmod only works in Unix/linux and Unix-like systems)
@@ -16,11 +16,10 @@ You can run the script with various command-line switches to view specific parts
 
 #) Run the Entire Script
 To run the entire script and see all monitoring information:
-
 bash Command-
-$./monitor.sh
-Run Specific Parts of the Dashboard
+$./monitor.sh (Imp Step)
 
+-> To Run Specific Parts of the Dashboard
 #)You can also call individual parts of the dashboard using the following switches:
 1) CPU Usage:
 bash Command-
@@ -70,6 +69,21 @@ $./monitor.sh -processes
 #)License
 This script is open-source and available under the MIT License. Feel free to modify and use it according to your needs.
 
+
+DESCRIPTION-
+-> System Monitoring Script-
+#)Overview
+This Bash script provides a dashboard to monitor various system resources on an Ubuntu server. It allows you to check CPU usage, memory usage, network activity, disk usage, system load, processes, and the status of essential services. You can run the entire script at once or call specific parts of the dashboard using command-line switches.
+
+#)Features
+CPU Usage: Displays the top 10 processes consuming the most CPU.
+Memory Usage: Shows total, used, free memory, and swap memory usage.
+Network Monitoring: Provides information about the number of concurrent connections, packet drops, and network usage in MB.
+Disk Usage: Shows disk space usage by mounted partitions, highlighting those using more than 80% of the space.
+System Load: Displays the current load average and CPU usage breakdown.
+Process Monitoring: Lists the number of active processes and the top 5 processes by CPU and memory usage.
+Service Monitoring: Checks the status of essential services like sshd, nginx/apache, and iptables.
+
                              #################################################################
                              
 SET 2: SCRIPT FOR AUTOMATING SECURITY AUDITS AND SERVER HARDENING ON LINUX SERVERS.
@@ -78,12 +92,16 @@ Installation-
 1.Clone the Repository:
 
 bash command-
-git clone https://github.com/your-username/security-audit-hardening.git
+git clone https://github.com/Sahebsinghisher/SysMon-SecureAudit/blob/main/security_audit_hardening.sh
 cd security-audit-hardening
 
-#) Make the Script Executable:
+#)Make the Script Executable: (Imp Step)
 bash command-
 $chmod +x security_audit_hardening.sh
+
+#)TO RUN THE SCRIPT (Imp Step)
+$sudo ./security_audit_hardening.sh
+
 
 -> Configuration
 #) Custom Security Checks:
@@ -138,6 +156,37 @@ This project is licensed under the MIT License. See the LICENSE file for details
 7. Rollback Plan: Advises on having a plan in case something goes wrong.
 8. Contributing and License: Information on contributing to the project and the licensing details. 
 
+
+
+DESCRIPTION-
+#)Security Audit and Server Hardening Script
+This Bash script automates the security audit and hardening process for Linux servers. It checks for common security vulnerabilities, configures network settings, and applies various hardening measures. The script is modular, reusable, and can be easily deployed across multiple servers.
+
+#)Features
+- User and Group Audits: Lists all users and groups, checks for users with root privileges, and identifies weak passwords.
+- File and Directory Permissions: Scans for world-writable files, checks SSH directory permissions, and reports files with SUID/SGID bits.
+- Service Audits: Lists running services, checks for unauthorized services, and ensures critical services are properly configured.
+- Firewall and Network Security: Verifies firewall status, reports open ports, and checks IP forwarding configurations.
+- IP and Network Configuration Checks: Identifies public vs. private IP addresses and ensures sensitive services are not exposed on public IPs.
+- Security Updates and Patching: Checks for available security updates and ensures regular update configuration.
+- Log Monitoring: Scans for suspicious log entries.
+- Server Hardening Steps: Configures SSH, disables IPv6 (if not required), secures the bootloader, and sets up automatic updates.
+- Custom Security Checks: Allows for the inclusion of custom security checks via a configuration file.
+- Reporting and Alerting: Generates a summary report and can optionally send email alerts.
+
+#)Prerequisites
+- Operating System: Linux (Tested on Ubuntu 23.04)
+- Permissions: Root or sudo access is required to execute the script.
+- Tools: Ensure the following tools are installed:
+  - `awk`
+  - `grep`
+  - `find`
+  - `netstat`
+  - `ufw`
+  - `iptables`
+  - `john` (for password auditing, optional)
+  - `unattended-upgrades`
+  - `mailx` or similar (for email alerts, optional)
 
 
 
